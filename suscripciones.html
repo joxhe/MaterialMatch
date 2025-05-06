@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material Match</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .image-hover:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
+        }
+        body {
+            background-color: #0b0b0c;
+        }
+        .bg-dark {
+            background-color: #0b0b0c;
+        }
+        .text-light {
+            color: #f7fafc;
+        }
+        .parallax-container {
+            perspective: 1px;
+            transform-style: preserve-3d;
+        }
+        .parallax-image {
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            transform: translateZ(-1px) scale(2);
+            will-change: transform;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+
+    <header class="bg-dark shadow fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+            </div>
+            <a href="index.html"><img src="Assets/logo.png" alt="Logo de Material Match" class="h-28 ml-2 "></a>
+            <div class="flex items-center space-x-4">
+            </div>
+        </div>
+    </header>
+
+
+    <main class="pt-16 md:pt-20">
+        <section class="py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12" data-aos="fade-up" data-aos-delay="50">Nuestros Planes de Suscripción</h1>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <div class="bg-gray-800 rounded-lg shadow-md p-8 flex flex-col items-center" data-aos="fade-right" data-aos-delay="100">
+                        <h3 class="text-2xl font-semibold mb-4">Básico</h3>
+                        <div class="text-5xl font-bold mb-4">$5.99 <span class="text-lg font-normal">/mes</span></div>
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>300 Matchs diarios</li>
+                            <li>Me gusta ilimitados</li>
+                            <li>10 moodboards al mes</li>
+                        </ul>
+                       <a href="form_registro.html"> <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Comenzar</button></a>
+                    </div>
+
+                    <div class="bg-blue-800 rounded-lg shadow-md p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-semibold mb-4">Premium</h3>
+                        <div class="text-5xl font-bold mb-4">$12.99 <span class="text-lg font-normal">/mes</span></div>
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>2000 Matchs diarios</li>
+                            <li>Me gusta ilimitados</li>
+                            <li>20 moodboards al mes</li>
+                        </ul>
+                        <a href="form_registro.html"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Comenzar</button></a>
+                    </div>
+
+                    <div class="bg-green-800 rounded-lg shadow-md p-8 flex flex-col items-center" data-aos="fade-left" data-aos-delay="300">
+                        <h3 class="text-2xl font-semibold mb-4">Estudiantes</h3>
+                        <div class="text-5xl font-bold mb-4">$7.99 <span class="text-lg font-normal">/mes</span></div>
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>1000 Matchs diarios</li>
+                            <li>Me gusta ilimitados</li>
+                            <li>20 moodboards al mes</li>
+                        </ul>
+                        <a href="form_registro.html"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300">Comenzar</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 120, // Puedes ajustar el offset si lo deseas
+            duration: 400, // Duración de la animación
+            easing: 'ease-in-out', // Tipo de animación
+            once: true, // Solo se anima una vez al cargar
+            mirror: false, // No se anima al hacer scroll hacia arriba
+        });
+    </script>
+
+
+
+<footer class="bg-dark-900 text-white py-6 md:py-8 text-center">
+    <p>© 2025 Material Match. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
